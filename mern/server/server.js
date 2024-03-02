@@ -1,19 +1,22 @@
 import cors from "cors";
 import records from "./routes/record.js";
+import userRoutes from "./routes/user.js";
 import express from 'express';
-// import { createRequire } from "module";
-import mongoose from "mongoose"
+import mongoose from "mongoose";
+
 
 const PORT = process.env.PORT || 5050;
 const app = express();
-// const require = createRequire(import.meta.url);
 
 
 
 app.use(cors());
 app.use(express.json());
-app.use("/record", records);
 
+
+// routes
+app.use("/record", records);
+app.use("/user", userRoutes);
 
 // connection to db
 mongoose.connect('mongodb+srv://manav:manav101@feedforward1.w5vgbmw.mongodb.net/?retryWrites=true&w=majority&appName=feedForward1')
@@ -26,4 +29,4 @@ mongoose.connect('mongodb+srv://manav:manav101@feedforward1.w5vgbmw.mongodb.net/
 		console.log(error)
 	})
 
-// start the Express server
+
