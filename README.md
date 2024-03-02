@@ -24,3 +24,4 @@ unihack2024
 // cd to server and paste this 'node --env-file=config.env server' and run
 // cd to client and run 'npm run dev'
 
+// just a test change from ziyad to see that i can make edits to the repo properly
