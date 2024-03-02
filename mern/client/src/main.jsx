@@ -7,6 +7,7 @@ import {
 import App from "./App";
 import Record from "./components/Record";
 import RecordList from "./components/RecordList";
+import MapsApi from "./components/MapsApi"
 import "./index.css";
 
 const router = createBrowserRouter([
@@ -37,6 +38,16 @@ const router = createBrowserRouter([
       {
         path: "/create",
         element: <Record />,
+      },
+    ],
+  },
+  {
+    path: "/map",
+    element: <App />,
+    children: [
+      {
+        path: "/map",
+        element: <MapsApi />,
       },
     ],
   },

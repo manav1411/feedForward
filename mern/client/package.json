@@ -10,8 +10,14 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@react-google-maps/api": "^2.19.3",
+    "@turf/turf": "^6.5.0",
+    "@vis.gl/react-google-maps": "^0.7.1",
+    "google-map-react": "^2.2.1",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "turf": "^3.0.14",
+    "use-places-autocomplete": "^4.0.1"
   },
   "devDependencies": {
     "@types/react": "^18.2.56",
