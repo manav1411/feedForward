@@ -7,8 +7,7 @@ import {
 import App from "./App";
 import Record from "./components/Record";
 import RecordList from "./components/RecordList";
-import MapsApi from "./components/MapsApi";
-import SignUp from "./components/SignUp";
+import MapsApi from "./components/MapsApi"
 import "./index.css";
 
 const router = createBrowserRouter([
@@ -50,13 +49,15 @@ const router = createBrowserRouter([
         path: "/map",
         element: <MapsApi />,
       },
+    ],
+  },
+  {
+    path: "/signup",
+    element: <App />,
+    children: [
       {
         path: "/signup",
-        element: <App />,
-        children: [
-        {
-            path: "/signup",
-            element: <SignUp />,
+        element: <SignUp />,
       },
     ],
   },
