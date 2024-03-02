@@ -23,7 +23,7 @@ const userSchema = new mongoose.Schema ({
 	},
 	averageRating: {
 		type:  Number,
-		default: 1
+		required: true
 	}
 })
 
