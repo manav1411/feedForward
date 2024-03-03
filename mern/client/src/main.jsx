@@ -1,15 +1,13 @@
 import * as React from "react";
 import * as ReactDOM from "react-dom/client";
-import {
-  createBrowserRouter,
-  RouterProvider,
-} from "react-router-dom";
+import { createBrowserRouter, RouterProvider} from "react-router-dom";
 import App from "./App";
 import Record from "./components/Record";
 import RecordList from "./components/RecordList";
 import MapsApi from "./components/MapsApi"
 import Homepage from "./components/Homepage"
 import CreateAccount from "./components/CreateAccount"
+import SignUp from "./components/SignUp"
 import "./index.css";
 
 //NOTE: everything is in terms of some-provider. need to implement multiple providers. so routes can go /other-provider, etc.
@@ -68,21 +66,22 @@ const router = createBrowserRouter([
     ],
   },
   {
-<<<<<<< HEAD
     path: "/createAccount",
     element: <App />,
     children: [
       {
         path: "/createAccount",
         element: <CreateAccount />,
-=======
+      },
+    ],
+  },
+  {
     path: "/signup",
     element: <App />,
     children: [
       {
         path: "/signup",
         element: <SignUp />,
->>>>>>> 9e167a4c36920a48705ba0a97f1e2f629f7c9832
       },
     ],
   },
