@@ -37,6 +37,7 @@ const Record = (props) => (
 
 export default function RecordList() {
   const [records, setRecords] = useState([]);
+const [recipeTitle, setRecipeTitle] = useState("");
 
   // This method fetches the records from the database.
   useEffect(() => {
@@ -48,6 +49,7 @@ export default function RecordList() {
         return;
       }
       const records = await response.json();
+generateFood(records);
       setRecords(records);
     }
     getRecords();
@@ -76,7 +78,32 @@ export default function RecordList() {
     });
   }
 
-  // This following section will display the table with the records of individuals.
+  async function generateFood(arr) {
+    try {
+      const ingredients = arr.map(record => record.name).join(',');
+      console.log(ingredients)
+      
+      const response = await fetch(`https://api.spoonacular.com/recipes/findByIngredients?ingredients=${ingredients}&apiKey=9e5b689110c34f6ca8a0f7262c398c74`);
+      console.log(response)
+      
+      if (!response.ok) {
+        throw new Error(`Error fetching recipe: ${response.statusText}`);
+      }
+      
+      const data = await response.json();
+      if (data.length > 0) {
+        // Get the title of the first recipe
+        const recipe = data[0];
+        setRecipeTitle(recipe.title);
+      } else {
+        setRecipeTitle("No recipe found for the given ingredients.");
+      }
+    } catch (error) {
+      console.error(error.message);
+      setRecipeTitle("Error fetching recipe.");
+    }
+  }
+
   return (
     <>
       <h3 className="text-lg font-semibold p-4">Ingredients / Food listings</h3>
@@ -105,6 +132,7 @@ export default function RecordList() {
           </table>
         </div>
       </div>
+<h1><marquee><em>{"Suggested FoodItem: " + recipeTitle}</em></marquee></h1>
     </>
   );
 }
