@@ -132,7 +132,7 @@ generateFood(records);
           </table>
         </div>
       </div>
-<h1><marquee><em>{"Suggested FoodItem: " + recipeTitle}</em></marquee></h1>
+<h1><marquee><em>{"Suggested FoodItem h: " + recipeTitle}</em></marquee></h1>
     </>
   );
 }
