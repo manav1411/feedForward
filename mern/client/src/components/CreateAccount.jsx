@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { NavLink } from "react-router-dom";
 
 const CreateAccount = () => {
   const [formData, setFormData] = useState({
@@ -9,6 +10,8 @@ const CreateAccount = () => {
     phoneNumber: '',
   });
 
+
+  
   const handleChange = (e) => {
     setFormData({
       ...formData,
@@ -44,12 +47,12 @@ const CreateAccount = () => {
 
         {/* Add more form fields (e.g., contactPerson, email, password, etc.) */}
 
-        <button
-          type="submit"
-          className="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600"
-        >
-          Create Account
-        </button>
+
+        <NavLink 
+            className="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600"
+            to="/create">
+            Create Account
+        </NavLink>
       </form>
     </div>
   );
