@@ -5,8 +5,8 @@ It does this by providing a platform to advertise excess food that providers hav
 On the other side, it provides a platform for receivers to view these locations, what foods they have available, locations, quantities, potential recipes, etc.
 
 ## Features
-1. When a food reciever is presented with a list of ingredients from a food reciever, using the spoonacular API, we provided the functionality to automatically list various dishes the reciever can make from the ingredients, e.g. a list of: Peanut Butter, Jam, and Bread, could present the user with a PBJ Sandwich.\
-2. intuitive UI/UX to follow and use, with users being able to easily see various locations of food providers on a map.\
+1. When a food reciever is presented with a list of ingredients from a food reciever, using the spoonacular API, we provided the functionality to automatically list various dishes the reciever can make from the ingredients, e.g. a list of: Peanut Butter, Jam, and Bread, could present the user with a PBJ Sandwich.
+2. intuitive UI/UX to follow and use, with users being able to easily see various locations of food providers on a map.
 3. We were planning to implement a photo to text tool so that providers only need to take photos of ingredients and everything is automatically organised.
 
 
